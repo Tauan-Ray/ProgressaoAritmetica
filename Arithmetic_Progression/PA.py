@@ -36,16 +36,16 @@ def start():
     start_button.destroy()
 
     # Criando botões para as operações
-    an_button = Button(app, command= lambda:an(calculate, app, (an_button, a1_button, n_button, r_button)) ,text='AN', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
+    an_button = Button(app, command= lambda:an(calculate, app, (an_button, a1_button, n_button, r_button), start) ,text='AN', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
     an_button.place(x=30, y=80)
 
-    a1_button = Button(app, text='A1', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
+    a1_button = Button(app, command= lambda:a1(calculate, app, (an_button, a1_button, n_button, r_button), start) ,text='A1', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
     a1_button.place(x=190, y=80)
 
-    n_button = Button(app, text='N', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
+    n_button = Button(app, command= lambda:n(calculate, app, (an_button, a1_button, n_button, r_button), start),text='N', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
     n_button.place(x=30, y=170)
 
-    r_button = Button(app, text='R', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
+    r_button = Button(app, command= lambda:n(calculate, app, (an_button, a1_button, n_button, r_button), start),text='R', width=10, height=3, anchor='center', font=('Arial 9 bold') ,relief='raised', overrelief='sunken', bg=Colorbutton, fg=Colorfont)
     r_button.place(x=190, y=170)
 
 
